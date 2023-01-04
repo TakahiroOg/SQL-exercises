@@ -1,0 +1,8 @@
+SELECT 
+prod_id, title, price,
+    CASE
+        WHEN price > 20 THEN 'expensive'
+        WHEN price <= 10 THEN 'cheap'
+        WHEN price BETWEEN 10 and 20 THEN 'average'
+    END as "price class"
+FROM products;
